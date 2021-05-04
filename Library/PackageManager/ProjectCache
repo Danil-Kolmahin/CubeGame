@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637557365862972484
+      ticks: 637557376314134276
     m_Hash: 3151474337
   m_LockFileStatus:
     m_FilePath: G:/3_cource_2/Java/CubeGame/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637557365862982496
+      ticks: 637557376314144284
     m_Hash: 2620467867
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
