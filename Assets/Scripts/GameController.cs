@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine. EventSystems;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class GameController : MonoBehaviour
     private Coroutine shpowCubePlace;
     public Color[] bgColors;
     private Color toCameraColor;
+    public Text scoreTxt;
     private List<Vector3> AllCubePositions = new List<Vector3>
     {
         new Vector3(0,0,0),
@@ -35,6 +37,7 @@ private int prevCountMaxHorizontal;
 private Transform mainCam;
     private void Start()
     {
+        scoreTxt.text = "<color=#F80127><size=40>Best:</size></color> " + PlayerPrefs.GetInt("score") + "\n<color=#1301F8><size=40>Now:</size></color> 0";
         toCameraColor = Camera.main.backgroundColor;
         mainCam = Camera.main.transform;
         camMoveToYPosition = 5.9f + nowCube.y - 1f;
@@ -163,7 +166,14 @@ private Transform mainCam;
             if (Mathf.Abs(Convert.ToInt32(pos.z)) > maxZ)
                 maxZ = Convert.ToInt32(pos.z);
         }
-    
+
+        if (PlayerPrefs.GetInt("score") < maxY)
+        {
+            PlayerPrefs.SetInt("score", maxY);
+        }
+
+        scoreTxt.text = "<color=#F80127><size=40>Best:</size></color> " + PlayerPrefs.GetInt("score") + "\n<color=#1301F8><size=40>Now:</size></color> " + maxY;
+
         camMoveToYPosition = 5.9f + nowCube.y - 1f;
 
         maxHor = maxX > maxZ ? maxX : maxZ;
