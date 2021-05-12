@@ -1364,12 +1364,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeChangePlaceSpeed: 0.5
   CubeToPlace: {fileID: 2146471730}
-  CubeToCreate: {fileID: 1602013805}
   AllCubes: {fileID: 1277993028}
   vfx: {fileID: 180128, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 3}
   canvasStartPage:
   - {fileID: 2091807079}
   - {fileID: 2098730754}
+  CubesToCreate:
+  - {fileID: 5032725891458074694, guid: d7c4965ef0f5f4d41acc02e47f3ef46d, type: 3}
+  - {fileID: 5032725891458074694, guid: bf2c8024b7a0f5e4c86bd7658796bce6, type: 3}
+  - {fileID: 5032725891458074694, guid: 403954585be6bf042aff8240671a18d3, type: 3}
+  - {fileID: 5032725891458074694, guid: 4ccd548bb678e824aa9a1ef7fd1a9477, type: 3}
+  - {fileID: 5032725891458074694, guid: 8ed48c07919a26b4b8c0d0031c5fd5b9, type: 3}
+  - {fileID: 5032725891458074694, guid: 271bbcfc626e1374fb6e7ec866497cd0, type: 3}
+  - {fileID: 5032725891458074694, guid: e1ad4f98fd7aff943b559e5001583fe9, type: 3}
+  - {fileID: 5032725891458074694, guid: daf24cd886753bb4c8621ede76f8d7ae, type: 3}
+  - {fileID: 5032725891458074694, guid: 24957f56f8b3c424d896773b3aa4679c, type: 3}
+  - {fileID: 5032725891458074694, guid: ce3221304a7283c47aaa2abf78b5b014, type: 3}
   bgColors:
   - {r: 0.7075472, g: 0.47547573, b: 0.15686187, a: 0}
   - {r: 0.68871397, g: 0.7058824, b: 0.15686274, a: 0}
@@ -1486,11 +1496,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1602013805 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5032725891458074694, guid: d7c4965ef0f5f4d41acc02e47f3ef46d, type: 3}
-  m_PrefabInstance: {fileID: 5032725892916953643}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1602013806 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5032725891458074693, guid: d7c4965ef0f5f4d41acc02e47f3ef46d, type: 3}

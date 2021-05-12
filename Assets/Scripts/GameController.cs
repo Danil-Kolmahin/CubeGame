@@ -11,8 +11,8 @@ public class GameController : MonoBehaviour
     public float cubeChangePlaceSpeed = 0.5f;
     public Transform CubeToPlace;
     private float camMoveToYPosition, camMoveSpeed = 2f;
-    public GameObject CubeToCreate, AllCubes, vfx;
-    public GameObject[] canvasStartPage;
+    public GameObject AllCubes, vfx;
+    public GameObject[] canvasStartPage, CubesToCreate;
     private Rigidbody AllCubesRb;
     private bool IsLose, firstCube;
     private Coroutine shpowCubePlace;
@@ -64,7 +64,7 @@ private Transform mainCam;
                 }
             }
 
-            GameObject newCube = Instantiate(CubeToCreate, CubeToPlace.position,Quaternion.identity) as GameObject;
+            GameObject newCube = Instantiate(CubesToCreate[UnityEngine.Random.Range(0, CubesToCreate.Length)], CubeToPlace.position,Quaternion.identity) as GameObject;
 
             newCube.transform.SetParent(AllCubes.transform);
             nowCube.setVector(CubeToPlace.position);
