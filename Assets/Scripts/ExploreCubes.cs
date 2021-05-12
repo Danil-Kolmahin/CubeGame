@@ -26,6 +26,10 @@ public class ExploreCubes : MonoBehaviour
             GameObject newVfx = Instantiate(explosion, new Vector3(collision.contacts[0].point.x, collision.contacts[0].point.y, collision.contacts[0].point.z), Quaternion.identity) as GameObject;
             Destroy(newVfx, 2.5f);
 
+            if (PlayerPrefs.GetString("music") != "No")
+            {
+                GetComponent<AudioSource>().Play();
+            }
 
             Destroy(collision.gameObject);
             _collisionSet = true;

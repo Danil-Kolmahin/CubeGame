@@ -71,6 +71,11 @@ private Transform mainCam;
 
             Destroy(newVfx, 1.5f);
 
+            if (PlayerPrefs.GetString("music") != "No")
+            {
+                GetComponent<AudioSource>().Play();
+            }
+
             AllCubesRb.isKinematic = true;
             AllCubesRb.isKinematic = false;
 
