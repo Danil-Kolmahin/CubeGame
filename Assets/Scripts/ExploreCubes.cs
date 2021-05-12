@@ -6,7 +6,7 @@ public class ExploreCubes : MonoBehaviour
 {
     private bool _collisionSet;
 
-    public GameObject restartButton;
+    public GameObject restartButton, explosion;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -21,6 +21,12 @@ public class ExploreCubes : MonoBehaviour
             }
             restartButton.SetActive(true);
             Camera.main.transform.position -= new Vector3(0, 0, 3f);
+            Camera.main.gameObject.AddComponent<CameraShacke>();
+
+            GameObject newVfx = Instantiate(explosion, new Vector3(collision.contacts[0].point.x, collision.contacts[0].point.y, collision.contacts[0].point.z), Quaternion.identity) as GameObject;
+            Destroy(newVfx, 2.5f);
+
+
             Destroy(collision.gameObject);
             _collisionSet = true;
         }
