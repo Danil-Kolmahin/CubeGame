@@ -37,7 +37,7 @@ private int prevCountMaxHorizontal;
 private Transform mainCam;
     private void Start()
     {
-        scoreTxt.text = "<color=#F80127><size=40>Best:</size></color> " + PlayerPrefs.GetInt("score") + "\n<color=#1301F8><size=40>Now:</size></color> 0";
+        scoreTxt.text = "<color=#898B91><size=40>Best:</size></color> " + PlayerPrefs.GetInt("score") + "\n<color=#898B91><size=40>Now:</size></color> 0";
         toCameraColor = Camera.main.backgroundColor;
         mainCam = Camera.main.transform;
         camMoveToYPosition = 5.9f + nowCube.y - 1f;
@@ -172,7 +172,7 @@ private Transform mainCam;
             PlayerPrefs.SetInt("score", maxY);
         }
 
-        scoreTxt.text = "<color=#F80127><size=40>Best:</size></color> " + PlayerPrefs.GetInt("score") + "\n<color=#1301F8><size=40>Now:</size></color> " + maxY;
+        scoreTxt.text = "<color=#898B91><size=40>Best:</size></color> " + PlayerPrefs.GetInt("score") + "\n<color=#898B91><size=40>Now:</size></color> " + maxY;
 
         camMoveToYPosition = 5.9f + nowCube.y - 1f;
 
